@@ -1,8 +1,9 @@
 FILENAME="fusion-flasher"
 FORMAT="raw"
 DIRECTORY="fusion"
+DATE=$(date '+%Y%m%d-%H%M%S')
 
-rm $FILENAME.$FORMAT
+rm -f $FILENAME.$FORMAT
 
 ./alpine-make-vm-image \
 	--image-format $FORMAT \
@@ -18,5 +19,5 @@ rm $FILENAME.$FORMAT
 	$FILENAME.$FORMAT -- ./$DIRECTORY/configure.sh
 
 echo "compressing..."
-tar -cvzf $FILENAME.$FORMAT.tar.gz $FILENAME.$FORMAT
+gzip -cvf $FILENAME.$FORMAT > $FILENAME-$DATE.img.gz
 

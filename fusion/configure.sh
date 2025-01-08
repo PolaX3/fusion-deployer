@@ -74,3 +74,5 @@ mv *.ihex /boot/fusion/firmware
 
 mv flash /usr/bin/flash
 chmod a+x /usr/bin/flash
+
+rm /tmp/fusion.zip
