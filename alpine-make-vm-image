@@ -431,7 +431,7 @@ while [ $# -gt 0 ]; do
 	shift $n
 done
 
-: ${ALPINE_BRANCH:="latest-stable"}
+: ${ALPINE_BRANCH:="3.21"}
 : ${ALPINE_MIRROR:="http://dl-cdn.alpinelinux.org/alpine"}
 : ${ARCH:=}
 : ${CLEANUP:="yes"}

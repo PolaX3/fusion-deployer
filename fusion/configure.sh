@@ -59,6 +59,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #the search command gives and error which may confuse some users.
 sed -i 's/search/#search/g' /boot/grub/grub.cfg
 
+#make pip quiet about global packages
+mkdir -p ~/.config/pip
+echo -e "[global]\nbreak-system-packages = true" > ~/.config/pip/pip.conf
+
 step 'Installing flasher'
 
 FX2_LOC="/opt/libfx2"
