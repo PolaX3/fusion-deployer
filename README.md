@@ -11,16 +11,19 @@ keep this flash drive in your coin bucket to swap between modes such as lxio, ga
 * a stock piuio
 * keyboard
 * computer inside your arcade cabinet
+* legacy boot enabled on your motherboard
 
 # disclaimer
 
 this action will apply new firmware to your piuio inside your expensive arcade equipment.
 
-firmware is backed up before flashing, but there is no warranty on this software. 
+firmware is backed up to the flash drive before flashing, but there is no warranty on this software. 
 
 **all risk for flashing the device is your own and no one else can be responsible for the actions of this software.**
 
 the author cannot provide detailed technical support on this project nor can the safety of your equipment be guaranteed.
+
+this alternative firmware does not guarantee the ability to use in online events, user discretion is advised.
 
 please take the necessary precautions and do not work on equipment you are not the direct owner of.
 
@@ -41,6 +44,7 @@ github issues related to troubleshooting the process will be closed and ignored.
 * plug in your keyboard
 * power on your arcade hardware
 * allow the system to boot to the fusion menu
+    * if the usb drive does not boot, ensure your motherboard is set to allow legacy booting. 
 * select your target mode (lxio, gamepad, etc)
 * your firmware will be backed up to the flash drive and the system will power down
 * power off the arcade hardware from the wall
@@ -49,7 +53,7 @@ github issues related to troubleshooting the process will be closed and ignored.
 * power on your arcade hardware
 * enjoy!
 
-# optional, but recommended
+# optional, but *highly* recommended
 
 a backup of your piuio firmware is saved to the flash drive. 
 
