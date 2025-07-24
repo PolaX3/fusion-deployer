@@ -36,6 +36,15 @@ github issues related to troubleshooting the process will be closed and ignored.
 * use your favorite disc writing tool like dd/gzip, balena etcher, etc to flash the `.img.gz` to the flash drive
 * once the copy is complete, safely eject the flash drive
 
+# how to pick an option to flash
+
+fusion has multiple different firmware targets that changes the way it shows up to games and computers.
+
+* LXIO: This will make the device show up as an 0x1020 "LXIO" or PumpHID/Nuvoton Pump device. You will get full 1khz compatibility with games and software that is written for it.
+* Gamepad: This turns the device into a generic HID gamepad with reactive lights. Use for general purpose PC use for generic games. This also offers the ability to control the lights with software on the PC.
+* PIUIO: This option will let the device show up as a PIUIO for all legacy games and software that support it. The advantage is it will poll at a higher rate, allowing up to 4x resolution in polling for games that otherwise don't support an LXIO.
+* Stock PIUIO: This will restore the backup of the firmware that is taken on first flash. This will return your device to stock settings just as when you started.
+
 # how to flash the piuio
 
 * turn off all arcade hardware
