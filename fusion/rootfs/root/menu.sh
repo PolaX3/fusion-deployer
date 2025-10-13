@@ -38,7 +38,7 @@ if [ ! -f $BACKUP_LOCATION ]; then
 fi
 
 PS3=$'\nPlease enter your choice: '
-options=("LXIO" "Gamepad" "PIUIO" "Stock PIUIO" "Shell")
+options=("LXIO" "Gamepad" "Keyboard" "PIUIO" "Stock PIUIO" "Shell")
 IFS=$'\n'
 select opt in "${options[@]}"; do
 	case $opt in
@@ -49,6 +49,11 @@ select opt in "${options[@]}"; do
 		;;
 	"Gamepad")
 		flash $FIRMWARE_LOC/gamepad.ihex
+		finished_flashing
+		break
+		;;
+	"Keyboard")
+		flash $FIRMWARE_LOC/keyboard.ihex
 		finished_flashing
 		break
 		;;
