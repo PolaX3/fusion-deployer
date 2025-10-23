@@ -23,11 +23,11 @@ The original firmware is backed up to the flash drive before flashing, but there
 
 The author **cannot** provide detailed technical support on this project nor can the safety of your equipment be guaranteed.
 
-This alternative firmware does not guarantee the ability to use in online events, user discretion is advised.
+This alternative firmware does not guarantee the ability to use in online events, especially in enhanced PIUIO mode. User discretion is advised.
 
 Please take the necessary precautions and do not work on equipment you are not the direct owner of.
 
-GitHub issues related to troubleshooting the process will be closed and ignored.
+GitHub issues related to troubleshooting process will be closed and ignored.
 
 # How to setup the flash drive
 
@@ -90,7 +90,7 @@ Testing QEMU environment for the flasher is in the test script.
 # ./test.sh
 ```
 
-# credits
+# Credits
 
 * [Alpine](https://www.alpinelinux.org/) is pretty cool as a project, check them out
 * Forked from [alpinelinux/alpine-make-vm-image](https://github.com/alpinelinux/alpine-make-vm-image), thank you so much
