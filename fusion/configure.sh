@@ -71,7 +71,18 @@ git clone --depth 1 https://github.com/whitequark/libfx2 $FX2_LOC
 
 step 'Pulling latest release'
 
-#TODO: pull latest from public github.
+
+#download the latest release from github.
+ASSET_URL=$(curl -s "https://api.github.com/repos/dinsfire64/fusion/releases/latest" |
+	jq -r '.assets[] | select(.name | endswith(".zip")) | .browser_download_url' | head -n 1)
+
+if [[ -z "$ASSET_URL" ]]; then
+	echo "ERROR No .zip asset found in the latest release."
+	exit 1
+fi
+
+echo "Downloading asset from ${ASSET_URL}"
+curl -L -o /tmp/fusion.zip "${ASSET_URL}"
 
 unzip -j /tmp/fusion.zip
 mv *.ihex /boot/fusion/firmware
