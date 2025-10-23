@@ -1,42 +1,42 @@
 # fusion-deployer
-alpine based linux flasher for fusion project
+Alpine-based Linux flasher for fusion project
 
-this system is a self contained linux image that will backup the firmware on your piuio to a flash drive, offer you a selection of fusion firmware targets, and allow you to swap between them easily.
+This system is a self-contained Linux image that will backup the firmware on your PIUIO to a flash drive, offer you a selection of fusion firmware targets, and allow you to swap between them easily.
 
-keep this flash drive in your coin bucket to swap between modes such as lxio, gamepad, piuio, and restore your backed up firmware.
+Keep this flash drive in your coin bucket to swap between modes such as LXIO, gamepad, PIUIO, and restore your backed up firmware.
 
-# requirements
+# Requirements
 
-* 256MB flash drive are larger
-* a stock piuio
-* keyboard
-* computer inside your arcade cabinet
-* legacy boot enabled on your motherboard
+* 256 MB flash drive or larger
+* Stock PIUIO
+* Keyboard
+* Computer inside your arcade cabinet
+* Legacy boot enabled on your motherboard
 
-# disclaimer
+# Disclaimer
 
-this action will apply new firmware to your piuio inside your expensive arcade equipment.
+This action will apply new firmware to your PIUIO inside your expensive arcade equipment.
 
-firmware is backed up to the flash drive before flashing, but there is no warranty on this software. 
+The original firmware is backed up to the flash drive before flashing, but there is no warranty on this software. 
 
-**all risk for flashing the device is your own and no one else can be responsible for the actions of this software.**
+**All risk for flashing the device is your own and no one else can be responsible for the actions of this software.**
 
-the author cannot provide detailed technical support on this project nor can the safety of your equipment be guaranteed.
+The author **cannot** provide detailed technical support on this project nor can the safety of your equipment be guaranteed.
 
-this alternative firmware does not guarantee the ability to use in online events, user discretion is advised.
+This alternative firmware does not guarantee the ability to use in online events, user discretion is advised.
 
-please take the necessary precautions and do not work on equipment you are not the direct owner of.
+Please take the necessary precautions and do not work on equipment you are not the direct owner of.
 
-github issues related to troubleshooting the process will be closed and ignored.
+GitHub issues related to troubleshooting the process will be closed and ignored.
 
-# how to setup the flash drive
+# How to setup the flash drive
 
-* click the release tab
-* download the latest `fusion-flasher*.img.gz`
-* use your favorite disc writing tool like dd/gzip, balena etcher, etc to flash the `.img.gz` to the flash drive
-* once the copy is complete, safely eject the flash drive
+* Click the release tab
+* Download the latest `fusion-flasher*.img.gz`
+* Use your favorite disc writing tool like dd/gzip, balenaEtcher, etc. to flash the `.img.gz` to the flash drive
+* Once the copy is complete, safely eject the flash drive
 
-# how to pick an option to flash
+# How to pick an option to flash
 
 fusion has multiple different firmware targets that changes the way it shows up to games and computers.
 
@@ -47,44 +47,44 @@ fusion has multiple different firmware targets that changes the way it shows up 
 * Stock PIUIO: This will restore the backup of the firmware that is taken on first flash. This will return your device to stock settings just as when you started.
 
 
-# how to flash the piuio
+# How to flash the PIUIO
 
-* turn off all arcade hardware
-* disconnect all flash drives, hard drives, and security dongles from your computer/mk*/etc
-* plug in the flash drive you just created
-* plug in your keyboard
-* power on your arcade hardware
-* allow the system to boot to the fusion menu
-    * if the usb drive does not boot, ensure your motherboard is set to allow legacy booting. 
-* select your target mode (lxio, gamepad, etc)
-* your firmware will be backed up to the flash drive and the system will power down
-* power off the arcade hardware from the wall
+* Turn off all arcade hardware
+* Disconnect all storage devices (flash drives, hard drives, SSD, etc.) and security dongle from your computer/MK
+* Plug in the flash drive you just created
+* Plug in your keyboard
+* Power on your arcade hardware
+* Allow the system to boot to the fusion menu
+    * If the flash drive does not boot, ensure your motherboard is set to allow legacy booting. 
+* Select your target mode (LXIO, gamepad, etc.)
+* Your firmware will be backed up to the flash drive and the system will power down
+* Power off your arcade hardware
 * ***YOU MUST FULLY POWER OFF THE CABINET FOR THE FIRMWARE TO APPLY***
-* reconnect your game drive
-* power on your arcade hardware
-* enjoy!
+* Reconnect your game drive and security dongle
+* Power on your arcade hardware
+* Enjoy!
 
-# optional, but *highly* recommended
+# Optional, but *highly* recommended
 
-a backup of your piuio firmware is saved to the flash drive. 
+A backup of your PIUIO firmware is saved to the flash drive. 
 
-please save the `stock_piuio.ihex` file in the `fusion` folder for save keeping on another computer, nas, cloud storage, etc.
+Please save the `stock_piuio.ihex` file in the `fusion` folder for save keeping on another computer, NAS, cloud storage, etc.
 
-this is your original firmware and can be reapplied at any time using the flasher.
+This is your original firmware and can be reapplied at any time using the flasher.
 
-# building the flasher
+# Building the flasher
 
-from root (to create the loopback object), run the build script:
+From root (to create the loopback object), run the build script:
 
 ```
 # ./build.sh
 ```
 
-a new `fusion-flasher*.img.gz` is created to be flashed to a flash drive and applied.
+A new `fusion-flasher*.img.gz` is created to be flashed to a flash drive and applied.
 
-# testing
+# Testing
 
-testing qemu environment for the flasher is in the test script.
+Testing QEMU environment for the flasher is in the test script.
 
 ```
 # ./test.sh
@@ -92,6 +92,6 @@ testing qemu environment for the flasher is in the test script.
 
 # credits
 
-* [alpine](https://www.alpinelinux.org/) is pretty cool as a project, check them out
-* forked from [alpinelinux/alpine-make-vm-image](https://github.com/alpinelinux/alpine-make-vm-image), thank you so much
-* main firmware project is here [dinsfire64/fusion](https://github.com/dinsfire64/fusion)
+* [Alpine](https://www.alpinelinux.org/) is pretty cool as a project, check them out
+* Forked from [alpinelinux/alpine-make-vm-image](https://github.com/alpinelinux/alpine-make-vm-image), thank you so much
+* Main firmware project is here [dinsfire64/fusion](https://github.com/dinsfire64/fusion)
