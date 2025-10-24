@@ -9,3 +9,5 @@ grub-bios
 lsblk
 git
 unzip
+curl
+jq
