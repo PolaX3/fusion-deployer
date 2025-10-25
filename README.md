@@ -10,14 +10,14 @@ Keep this flash drive in your coin bucket to swap between modes such as LXIO, ga
 * 256 MB flash drive or larger
 * Stock PIUIO
 * Keyboard
-* Computer inside your arcade cabinet
+* Computer (MK) inside your arcade cabinet
 * Legacy boot enabled on your motherboard
 
 # Disclaimer
 
 This action will apply new firmware to your PIUIO inside your expensive arcade equipment.
 
-The original firmware is backed up to the flash drive before flashing, but there is no warranty on this software. 
+The original firmware is backed up to the flash drive before flashing, but it is not a guarantee and there is no warranty on this software. 
 
 **All risk for flashing the device is your own and no one else can be responsible for the actions of this software.**
 
@@ -44,18 +44,18 @@ fusion has multiple different firmware targets that changes the way it shows up 
 * Gamepad: This turns the device into a generic HID gamepad with reactive lights. Use for general purpose PC use for generic games. This also offers the ability to control the lights with software on the PC.
 * Keyboard: This option is useful for older games with compatibility problems with the gamepad mode. Maps the device to QESZC and numpad 79513.
 * PIUIO: This option will let the device show up as a PIUIO for all legacy games and software that support it. The advantage is it will poll at a higher rate, allowing up to 4x resolution in polling for games that otherwise don't support an LXIO.
-* Stock PIUIO: This will restore the backup of the firmware that is taken on first flash. This will return your device to stock settings just as when you started.
+* Stock PIUIO: This will restore the backup of the firmware that is taken on the first flash. This will return your device to stock settings just as when you started.
 
 
 # How to flash the PIUIO
 
-* Turn off all arcade hardware
-* Disconnect all storage devices (flash drives, hard drives, SSD, etc.) and security dongle from your computer/MK
+* Turn off all arcade hardwares
+* Disconnect all storage device (flash drives, hard drives, SSD, etc.) and security dongle from your computer/MK
 * Plug in the flash drive you just created
 * Plug in your keyboard
 * Power on your arcade hardware
 * Allow the system to boot to the fusion menu
-    * If the flash drive does not boot, ensure your motherboard is set to allow legacy booting. 
+    * If the flash drive does not boot, ensure your motherboard is set to allow booting from USB device and legacy booting/CSM is enabled. 
 * Select your target mode (LXIO, gamepad, etc.)
 * Your firmware will be backed up to the flash drive and the system will power down
 * Power off your arcade hardware
